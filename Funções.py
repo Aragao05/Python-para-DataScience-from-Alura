@@ -222,12 +222,12 @@
 # 7. Você recebeu uma demanda para tratar 2 listas com os nomes e sobrenomes de cada estudante concatenando-as para apresentar seus 
 # nomes completos na forma Nome Sobrenome. As listas são:
 
-nomes = ["joão", "MaRia", "JOSÉ"]
-sobrenomes = ["SILVA", "souza", "Tavares"]
+#nomes = ["joão", "MaRia", "JOSÉ"]
+#sobrenomes = ["SILVA", "souza", "Tavares"]
 
-nome_completo = map(lambda nome, sobrenome: f"{nome.title()} {sobrenome.title()}", nomes, sobrenomes)
+#nome_completo = map(lambda nome, sobrenome: f"{nome.title()} {sobrenome.title()}", nomes, sobrenomes)
 
-for n in nome_completo:
-    print(f"nome completo: {n}")
+#for n in nome_completo:
+#    print(f"nome completo: {n}")
 
-
+# 8. 
