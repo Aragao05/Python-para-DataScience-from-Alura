@@ -1,2 +1,5 @@
-for i in range(0, 20, 3):
-    print(i)
+lista = ['Pedro', 'Júlia', 'Otávio', 'Eduardo']
+lista2 = enumerate(lista)
+
+
+print(lista2)
