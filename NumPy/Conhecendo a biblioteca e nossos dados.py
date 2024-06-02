@@ -28,7 +28,7 @@ dado_transposto = dado.T # Mostra a tabela seoara por linhas e colunas
 #print(dado_transposto)
 
 # Exercicios
-"""
+
 import numpy as np
 
 url = 'https://raw.githubusercontent.com/allanspadini/numpy/dados/citrus.csv'
@@ -37,52 +37,3 @@ oranges = np.loadtxt(url, delimiter = ',', usecols = np.arange(1,6,1), skiprows 
 #print(oranges)
 
 print(oranges.T)
-"""
-
-#Exploração dos Dados
-import matplotlib.pyplot as plt
-
-datas = dado_transposto[:,0] # salva somente os anos em datas
-precos = dado_transposto[:,1:6] # salva todos os preços em preco
-
-#datas = np.arange(1,88,1)
-
-#grafico = plt.plot(datas, precos[:,0]) 
-#plt.show() # mostra o grafico criado 
-
-Moscow = precos[:,0]
-Kaliningrad = precos[:,1]
-Petersburg = precos[:,2]
-Krasnodar = precos[:,3]
-Ekaterinburg = precos[:,4]
-
-Moscow_ano1 = Moscow[0:12]
-Moscow_ano2 = Moscow[12:24]
-Moscow_ano3 = Moscow[24:36]
-Moscow_ano4 = Moscow[36:48]
-
-plt.plot(np.arange(1,13,1), Moscow_ano1)
-plt.plot(np.arange(1,13,1), Moscow_ano2)
-plt.plot(np.arange(1,13,1), Moscow_ano3)
-plt.plot(np.arange(1,13,1), Moscow_ano4)
-plt.legend(['ano1', 'ano2', 'ano3', 'ano4'])
-
-plt.show()
-
-np.array_equal(Moscow_ano3, Moscow_ano4)
-np.allclose(Moscow_ano3, Moscow_ano4,10)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
