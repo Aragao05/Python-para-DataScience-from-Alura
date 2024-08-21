@@ -1,21 +1,15 @@
 import numpy as np
-import matplotlib.pyplot as plt
 
-# Gerar uma sequência de valores de x de -1 a 1
-x = np.arange(-1, 1.01, 0.0001)
+# Dados de exemplo
+data = np.array([10, 20, 30, 40, 150, 50, 60, 70, 80, 90, 100, 350])
 
-# Implementação da fórmula
-y1 = np.sqrt(1 - x**2)
-y2 = -np.sqrt(1 - x**2)
+# Cálculo do z-score
+z_scores = (data - np.mean(data)) / np.std(data)
 
-# Plotar o gráfico com as duas partes do círculo
-plt.plot(x, y1, 'r')
-plt.plot(x, y2, 'r' )
+# Limite para considerar um dado como outlier
+limite = 3
 
-# Adicionar o título do gráfico e os rótulos dos eixos x e y
-plt.title("Círculo")
-plt.xlabel("Eixo x")
-plt.ylabel("Eixo y")
+# Identificação dos outliers
+outliers = data[np.abs(z_scores) > limite]
 
-# Exibir o gráfico
-plt.show()
+print("Outliers encontrados:", outliers)
